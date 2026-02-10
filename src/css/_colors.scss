@@ -2,3 +2,14 @@ $primary-color: #c9b59c;
 $secondary-color: #d9cfc7;
 $background-color: #f9f8f6;
 
+nav {
+    background-color: $primary-color;
+}
+
+main {
+    background-color: $secondary-color;
+}
+
+footer {
+    background-color: $primary-color;
+}
