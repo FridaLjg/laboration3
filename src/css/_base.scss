@@ -11,6 +11,13 @@ body {
 
 nav {
 
+    #menu-toggle {
+        display: none;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 1rem;
+    }
+
     ul {
         display: flex;
         justify-content: center;
@@ -65,4 +72,41 @@ footer {
     gap: 5rem;
     padding: 1%;
     font-weight: 600;
+}
+
+/*Style för mobil och tablet*/
+@media (max-width: 800px) {
+
+    nav {
+        #menu-toggle {
+            display: block;
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+        }
+
+        ul {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 1rem 0;
+            gap: 1rem;
+        }
+
+        ul.open {
+            display: flex;
+        }
+    }
+
+    main {
+        .content {
+            width: 90%;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
