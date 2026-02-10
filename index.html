@@ -1,47 +1,52 @@
 <!doctype html>
 <html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Startsida</title>
-    <link rel="stylesheet" href="src/scss/styles.scss">
-  </head>
 
-  <body>
-    <div class="container">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Startsida</title>
+  <link rel="stylesheet" href="src/scss/styles.scss">
+</head>
 
-      <!--Navigeringsmeny-->
-      <nav>
-        <ul>
-          <li class="you-are-here"><a href="index.html">Startsida</a></li>
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="">XXX</a></li>
-          <li><a href="">XXX</a></li>
-          <li><a href="">XXX</a></li>
-        </ul>
-      </nav>
+<body>
+  <div class="container">
 
-      <!--Header-->
-      <header>
-        <picture>
-          <source srcset="./images/header-largew.webp" type="image/webp" media="(min-width: 800px)">
-          <source srcset="./images/header-smallw.webp" type="image/webp">
-          <img src="./images/header-largej.jpg" alt="">
-        </picture>
-      </header>
+    <!--Navigeringsmeny-->
+    <nav>
+      <ul>
+        <li class="you-are-here"><a href="index.html">Startsida</a></li>
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="#">XXX</a></li>
+        <li><a href="#">XXX</a></li>
+        <li><a href="#">XXX</a></li>
+      </ul>
+    </nav>
 
-      <!--Main-->
-      <main>
+    <!--Header-->
+    <header>
+      <picture>
+        <source srcset="./images/header-largew.webp" type="image/webp" media="(min-width: 800px)">
+        <source srcset="./images/header-smallw.webp" type="image/webp">
+        <img src="./images/header-largej.jpg" alt="">
+      </picture>
+    </header>
 
-      </main>
+    <!--Main-->
+    <main>
 
-
-      <!--Footer-->
-      <footer></footer>
-
-    </div>
+    </main>
 
 
-    <script type="module" src="/src/main.js"></script>
-  </body>
+    <!--Footer-->
+    <footer>
+      <p>Av: Frida Ljungberg, 2026.</p>
+      <p id="clock"></p>
+    </footer>
+
+  </div>
+
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
 </html>
