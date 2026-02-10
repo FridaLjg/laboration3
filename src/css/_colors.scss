@@ -1,9 +1,19 @@
 $primary-color: #c9b59c;
 $secondary-color: #d9cfc7;
 $background-color: #f9f8f6;
+$link-hover-color: #fae5cc;
+$font-color: #000000;
 
 nav {
     background-color: $primary-color;
+    
+    a {
+        color: $font-color;
+    }
+
+    a:hover {
+        background-color: $link-hover-color;
+    }
 }
 
 main {
