@@ -1,8 +1,12 @@
+@use "sass:color";
+
 $primary-color: #c9b59c;
 $secondary-color: #d9cfc7;
 $background-color: #f9f8f6;
-$link-hover-color: #fae5cc;
+$link-hover-color: color.scale($primary-color, $lightness: 50%);
+$link-active-color: color.scale($primary-color, $lightness: -20%);
 $font-color: #000000;
+$white: #FFFF;
 
 nav {
     background-color: $primary-color;
@@ -13,6 +17,14 @@ nav {
 
     a:hover {
         background-color: $link-hover-color;
+    }
+
+    a:active {
+        background-color: $link-active-color;
+    }
+
+    #menu-toggle {
+        color: $white;
     }
 }
 

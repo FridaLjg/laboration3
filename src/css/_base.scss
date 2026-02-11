@@ -2,11 +2,11 @@ $font-stack: Verdana, Geneva, Tahoma, sans-serif;
 
 body {
     margin: 0 auto;
-}
 
-.container {
-    font-family: $font-stack;
-    width: 100%;
+    .container {
+        font-family: $font-stack;
+        width: 100%;
+    }
 }
 
 nav {
@@ -102,6 +102,7 @@ footer {
     main {
         .content {
             width: 90%;
+            max-width: 65ch;
         }
     }
 
