@@ -1,16 +1,23 @@
 @use "sass:color";
 
 $primary-color: #c9b59c;
-$secondary-color: #d9cfc7;
-$background-color: #f9f8f6;
+$background-color: #d9cfc7;
 $link-hover-color: color.scale($primary-color, $lightness: 50%);
 $link-active-color: color.scale($primary-color, $lightness: -20%);
 $font-color: #000000;
 $white: #FFFF;
 
+/*Variabler för mörkt tema*/
+$primary-color-dark: #272421;
+$background-color-dark: #3a3223;
+$link-hover-color-dark: color.scale($primary-color-dark, $lightness: 50%);
+$link-active-color-dark: color.scale($primary-color-dark, $lightness: -20%);
+$font-color-dark: #ffffffb7;
+$white: #FFFF;
+
 nav {
     background-color: $primary-color;
-    
+
     a {
         color: $font-color;
     }
@@ -29,9 +36,41 @@ nav {
 }
 
 main {
-    background-color: $secondary-color;
+    background-color: $background-color;
 }
 
 footer {
     background-color: $primary-color;
+}
+
+@media (prefers-color-scheme: dark) {
+    nav {
+        background-color: $primary-color-dark;
+
+        a {
+            color: $font-color-dark;
+        }
+
+        a:hover {
+            background-color: $link-hover-color-dark;
+        }
+
+        a:active {
+            background-color: $link-active-color-dark;
+        }
+
+        #menu-toggle {
+            color: $white;
+        }
+    }
+
+    main {
+        background-color: $background-color-dark;
+        color: $font-color-dark;
+    }
+
+    footer {
+        background-color: $primary-color-dark;
+        color: $font-color-dark;
+    }
 }
