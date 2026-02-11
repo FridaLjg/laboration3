@@ -10,7 +10,6 @@ setInterval(clock, 1000);
 clock();
 
 //Funktion för hamburgermeny
-
 const hamburger = document.querySelector("#menu-toggle");
 const menu = document.querySelector("nav ul");
 

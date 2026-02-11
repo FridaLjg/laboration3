@@ -69,13 +69,27 @@ main {
         line-height: 1.5rem;
     }
 
-    img {
-        padding-top: 2%;
+    .images {
+        @include flex-center();
+        gap: 1rem;
 
-        @if $rounded-images {
-            border-radius: 20%;
-        } @else {
-            border-radius: 0;
+        picture {
+            @include flex-center();
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+        }
+
+        img {
+            width: 100%;
+
+            @if $rounded-images {
+                border-radius: 35%;
+            }
+
+            @else {
+                border-radius: 0;
+            }
         }
     }
 }
