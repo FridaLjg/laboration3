@@ -1,5 +1,8 @@
+/*Variabler*/
 $font-stack: Verdana, Geneva, Tahoma, sans-serif;
+$rounded-images: true;
 
+/*"mixins"*/
 @mixin flex-center() {
     display: flex;
     justify-content: center;
@@ -48,6 +51,7 @@ header {
     img {
         height: auto;
         width: 100%;
+        display: block
     }
 }
 
@@ -66,8 +70,13 @@ main {
     }
 
     img {
-        border-radius: 10%;
         padding-top: 2%;
+
+        @if $rounded-images {
+            border-radius: 20%;
+        } @else {
+            border-radius: 0;
+        }
     }
 }
 

@@ -1,12 +1,13 @@
+/*"mixins"*/
 @mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
 /*Style för mobil och tablet*/
 @media (max-width: 800px) {
+
     nav {
         #menu-toggle {
             display: block;
