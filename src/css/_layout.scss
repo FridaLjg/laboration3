@@ -31,14 +31,27 @@
     }
 
     main {
+
         .content {
             width: 90%;
             max-width: 65ch;
+            margin: 0 auto;
+        }
+
+        .images {
+            display: flex;
+            flex-direction: column;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
         }
     }
 
-    img {
-        max-width: 100%;
-        height: auto;
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
     }
 }
