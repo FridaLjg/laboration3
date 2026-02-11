@@ -1,5 +1,11 @@
 $font-stack: Verdana, Geneva, Tahoma, sans-serif;
 
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 body {
     margin: 0 auto;
 
@@ -19,8 +25,7 @@ nav {
     }
 
     ul {
-        display: flex;
-        justify-content: center;
+        @include flex-center();
         gap: 100px;
         margin: 0 auto;
         padding: 2rem;
@@ -44,14 +49,12 @@ header {
 }
 
 main {
-    display: flex;
+    @include flex-center();
     flex-direction: column;
-    align-items: center;
     padding-bottom: 2%;
 
     h1 {
-        display: flex;
-        justify-content: center;
+        @include flex-center();
     }
 
     .content {
@@ -66,9 +69,8 @@ main {
 }
 
 footer {
+    @include flex-center();
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
     gap: 5rem;
     padding: 1%;
     font-weight: 600;
@@ -95,7 +97,7 @@ footer {
         }
 
         ul.open {
-            display: flex;
+            @include flex-center();
         }
     }
 
