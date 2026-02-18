@@ -2,22 +2,22 @@
 @keyframes text-zoom {
     from {
         transform: scale(1);
-        color: black;
     }
 
     to {
         transform: scale(1.5);
-        color: rgb(88, 21, 21);
     }
 }
 
 .text-animation {
     transform: translateY(0) scale(1);
     color: black;
-    animation-name: text-zoom;
+    transition: transform 0.7s ease-out, color 1s ease-out;
 
     &:hover {
-        animation: text-zoom ease-in forwards;
+        animation: text-zoom 0.7s ease-out;
+        transform: scale(1.5);
+        color: rgb(88, 21, 21);
     }
 }
 
@@ -33,10 +33,10 @@
 
 .images-animation {
     transform: translateY(0);
-    transition: transform 0.5s ease-out;
+    transition: transform 0.4s ease-out;
 
     &:hover {
-        animation: images-float-up 0.5s ease-out;
+        animation: images-float-up 0.4s ease-out;
         transform: translateY(-15px);
     }
 }
