@@ -1,5 +1,5 @@
-# Laboration 3 - DT211G
-I denna uppgift har jag fått lära mig om SCSS och hur det kan användas vid utveckling av webbplatser.
+# Laboration 4 - DT211G
+I denna uppgift har jag tränat på att göra animationer i SCSS. 
 
 ## Om
 Av Frida Ljungberg, 2026.
