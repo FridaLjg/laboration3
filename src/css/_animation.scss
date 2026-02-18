@@ -1,0 +1,22 @@
+/*Animation för h1*/
+@keyframes text-float-up {
+    from {
+        transform: translateY(0);
+        color: black;
+    }
+
+    to {
+        transform: translateY(-10px);
+        color: rgb(88, 21, 21);
+    }
+}
+
+.text-animation {
+    transform: translateY(0);
+    color: black;
+    animation-name: text-flor-up;
+
+    &:hover {
+        animation: text-float-up 300ms ease-out forwards;
+    }
+}
