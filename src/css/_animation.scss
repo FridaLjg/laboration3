@@ -26,6 +26,7 @@
     0% {
         transform: translateY(0);
     }
+
     100% {
         transform: translateY(-15px);
     }
@@ -39,4 +40,26 @@
         animation: images-float-up 0.4s ease-out;
         transform: translateY(-15px);
     }
+}
+
+/*Animation för målvaktshjälm*/
+@keyframes fall-down {
+  0% {
+    transform: translate(0, -1000px);
+  }
+
+  20% {
+    transform: translate(0, -100px);
+  }
+
+  100% {
+    transform: translate(0, 110vh);
+  }
+}
+
+.falling-object {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  animation: fall-down 10s linear infinite;
 }
