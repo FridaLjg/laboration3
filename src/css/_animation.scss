@@ -1,22 +1,45 @@
 /*Animation för h1*/
-@keyframes text-float-up {
+@keyframes text-zoom {
     from {
-        transform: translateY(0);
+        transform: scale(1);
         color: black;
     }
 
     to {
-        transform: translateY(-10px);
+        transform: scale(1.5);
         color: rgb(88, 21, 21);
     }
 }
 
 .text-animation {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
     color: black;
-    animation-name: text-flor-up;
+    animation-name: text-zoom;
 
     &:hover {
-        animation: text-float-up 300ms ease-out forwards;
+        animation: text-zoom ease-in forwards;
+    }
+}
+
+/*Animation för bild*/
+@keyframes images-float-up {
+    0% {
+        transform: translateY(0);
+    }
+
+    70% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.images-animation {
+    transform: translateY(0);
+
+    &:hover {
+        animation: images-float-up 1s ease-out forwards;
     }
 }
