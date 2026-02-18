@@ -73,6 +73,13 @@ main {
         @include flex-center();
     }
 
+    button {
+        @include flex-center();
+        width: 200px;
+        height: 50px;
+        margin-bottom: 2%;
+    }
+
     .content {
         width: 70ch;
         line-height: 1.5rem;
