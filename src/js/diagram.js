@@ -21,6 +21,17 @@ async function loadData() {
     }
 }
 
+/**
+ * @typedef {Object} Data
+ * @property {string} type - Kurs eller program
+ * @property {string} name - Kurs- eller programnamn
+ * @property {number} applicantsTotal - Totalt antal sökande
+*/
+
+/**
+ * Funktion för att skapa stapeldiagram
+ * @param {Data[]} data
+ */
 function createChartStaple(data) {
     const courses = data.filter(data => data.type === "Kurs")
     const sorted = courses.sort((a, b) => b.applicantsTotal - a.applicantsTotal);
@@ -45,6 +56,10 @@ function createChartStaple(data) {
     })
 }
 
+/**
+ * Funktion för att skapa cirkeldiagram
+ * @param {Data[]} data
+ */
 function createChartPie(data) {
     const courses = data.filter(data => data.type === "Program")
     const sorted = courses.sort((a, b) => b.applicantsTotal - a.applicantsTotal);
