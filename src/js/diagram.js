@@ -14,6 +14,7 @@ async function loadData() {
         const data = await response.json();
 
         createChartStaple(data);
+        createChartPie(data);
 
     } catch (error) {
         console.error("Fel " + error);
@@ -39,6 +40,29 @@ function createChartStaple(data) {
                 data: values,
                 borderWidth: 1,
                 backgroundColor: 'brown'
+            }]
+        },
+    })
+}
+
+function createChartPie(data) {
+    const courses = data.filter(data => data.type === "Program")
+    const sorted = courses.sort((a, b) => b.applicantsTotal - a.applicantsTotal);
+    const mostFive = sorted.slice(0, 5);
+
+    const labels = mostFive.map(data => data.name);
+    const values = mostFive.map(data => data.applicantsTotal);
+
+    const ctx = document.getElementById('pie');
+
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Antal sökande',
+                data: values,
+                backgroundColor: ['brown', 'blue', 'green', 'yellow', 'orange']
             }]
         },
     })
