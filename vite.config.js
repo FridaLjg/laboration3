@@ -8,7 +8,9 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, "index.html"),
                 scss: resolve(__dirname, "scss.html"),
-                animering: resolve(__dirname, "animering.html")
+                animering: resolve(__dirname, "animering.html"),
+                diagram: resolve(__dirname, "diagram.html"),
+                karta: resolve(__dirname, "karta.html")
             }
         }
     },
