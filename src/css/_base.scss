@@ -73,6 +73,10 @@ main {
         @include flex-center();
     }
 
+    h2 {
+        @include flex-center();
+    }
+
     button {
         @include flex-center();
         width: 200px;
@@ -83,6 +87,10 @@ main {
     .content {
         width: 70ch;
         line-height: 1.5rem;
+    }
+
+    .chart {
+        width: 70%;
     }
 
     .images {
