@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Startsida</title>
+  <title>Karta</title>
   <link rel="stylesheet" href="src/css/main.scss">
 </head>
 
@@ -36,7 +36,9 @@
 
     <!--Main-->
     <main>
-      <section>
+      <h1>Karta</h1>
+
+      <div id="map"></div>
 
     </main>
 
@@ -49,6 +51,8 @@
   </div>
 
   <script type="module" src="/src/js/main.js"></script>
+  <script src="/src/js/karta.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1sJROu-pvac4_UNZTBRMhOopqqpabAzQ&callback=initMap" async defer></script>
 </body>
 
 </html>
