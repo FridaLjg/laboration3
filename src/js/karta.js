@@ -6,7 +6,9 @@ function buildMap(lat, lon, pad = 0.01, layer = 'mapnik') {
     const bottom = lat - pad;
     const top = lat + pad;
     const bbox = [left, bottom, right, top].join('%2C');
-    return `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=${layer}`;
+    const marker = `${lat}%2C${lon}`;
+    return `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=${layer}&marker=${marker}`;
+
 }
 
 async function loadData(city) {
