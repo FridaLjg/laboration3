@@ -42,4 +42,16 @@ function initMap() {
         }
     }
 
+     function Result(data) {
+        const place = data.places[0];
+
+        const pos = {
+            lat: place.location.latitude,
+            lng: place.location.longitude,
+        };
+
+        map.setCenter(pos);
+        map.setZoom(13);
+    }
+    
     window.initMap = initMap;
