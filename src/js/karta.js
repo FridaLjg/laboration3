@@ -1,5 +1,13 @@
 "use strict";
 
+function buildMap(lat, lon, pad = 0.01, layer = 'mapnik') {
+    const left = lon - pad;
+    const right = lon + pad;
+    const bottom = lat - pad;
+    const top = lat + pad;
+    const bbox = [left, bottom, right, top].join('%2C');
+    return `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=${layer}`;
+}
 
 async function loadData(city) {
     const url = new URL("https://geocoding-api.open-meteo.com/v1/search");
@@ -11,7 +19,13 @@ async function loadData(city) {
     try {
         const response = await fetch(url.toString());
         const data = await response.json();
-        console.log(data)
+
+        const first = data.results?.[0];
+        const lat = first.latitude;
+        const lon = first.longitude;
+
+        const frame = document.getElementById("map");
+        frame.src = buildMap(lat, lon);
 
     } catch (error) {
         console.error("Fel " + error);
